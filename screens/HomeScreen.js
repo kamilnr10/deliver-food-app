@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TextInput,
-  ScrollView,
-} from "react-native";
+import { View, Text, Image, TextInput, ScrollView } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
@@ -14,6 +7,7 @@ import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/solid";
+import SafeAreaView from "react-native-safe-area-view";
 import Categories from "../components/Categories.js";
 import FeaturedRow from "../components/FeaturedRow.js";
 import client from "../sanity";
@@ -47,7 +41,7 @@ const HomeScreen = () => {
       //   setFeaturedCategories(data);
       // });
     };
-    console.log("check");
+    // console.log();
     fetchData().catch(console.error);
   }, []);
 
